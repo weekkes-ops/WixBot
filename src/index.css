@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-trading-bg: #0A0B0D;
+  --color-trading-card: #15171C;
+  --color-trading-green: #00C087;
+  --color-trading-red: #FF3B69;
+  --color-trading-gold: #F0B90B;
+  --color-trading-border: #2B2F36;
+}
+
+@layer base {
+  body {
+    @apply bg-trading-bg text-gray-100 font-sans;
+  }
+}
+
+.trading-panel {
+  @apply bg-trading-card border border-trading-border rounded-lg p-6 shadow-xl;
+}
+
+.trading-input {
+  @apply bg-trading-bg border border-trading-border rounded px-4 py-2 text-sm focus:outline-none focus:border-trading-gold transition-colors;
+}
+
+.trading-button-primary {
+  @apply bg-trading-gold text-black font-bold py-2 px-6 rounded hover:brightness-110 transition-all uppercase text-xs tracking-widest;
+}
+
+.trading-button-secondary {
+  @apply border border-trading-border text-gray-300 py-2 px-6 rounded hover:bg-white/5 transition-all uppercase text-xs tracking-widest;
+}
+
+.status-badge {
+  @apply px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter;
+}
+
